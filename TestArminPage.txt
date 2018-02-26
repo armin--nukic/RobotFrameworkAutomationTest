@@ -1,0 +1,26 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Variables ***
+${url}            http://www.armin.gq/
+@{CREDENTIALS}    armin nukic    armin@hotmail.com    ej gdje si ba
+
+*** Test Cases ***
+TestCase2
+    [Documentation]    Check for sending an email to Armins page
+    [Tags]    Test2
+    Open Browser    ${url}    chrome
+    Maximize Browser Window
+    Click Element    //*[@id="navbar"]/ul/li[3]/a
+    Input Text    id=name    @{CREDENTIALS}[0]
+    Sleep    2
+    Input Text    id=email    @{CREDENTIALS}[1]
+    Sleep    2
+    Input Text    id=message    @{CREDENTIALS}[2]
+    Sleep    2
+    Click Button    id=dugmeSubmit
+    Sleep    2
+    Close Browser
+    Log To Console    Completed successfully
+
+*** Keywords ***
