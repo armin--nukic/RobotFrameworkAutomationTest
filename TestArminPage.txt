@@ -2,7 +2,7 @@
 Library           SeleniumLibrary
 
 *** Variables ***
-${url}            http://www.armin.gq/
+${url}            https://armin--nukic.github.io/armin.gq/
 @{CREDENTIALS}    armin nukic    armin@hotmail.com    ej gdje si ba
 
 *** Test Cases ***
